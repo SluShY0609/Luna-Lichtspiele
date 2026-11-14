@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0D0D0D">
+  <meta name="description" content="Luna Lichtspiele in Falkenried. Ein familiengeführtes Traditionskino seit 1928.">
+  <title>Luna Lichtspiele · Falkenried seit 1928</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230D0D0D'/%3E%3Cpath d='M23 5A12 12 0 1 0 25 25A13 13 0 0 1 23 5' fill='%23C5A059'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__bar">
+      <a class="site-brand" href="#start" aria-label="Luna Lichtspiele – zum Anfang">
+        <svg viewBox="0 0 80 80" width="28" height="28" aria-hidden="true"><path d="M51 7A34 34 0 1 0 65 64A35 35 0 0 1 51 7Z" fill="currentColor"/></svg>
+        <span>LUNA LICHTSPIELE</span>
+      </a>
+      <button class="site-header__toggle" type="button" aria-expanded="false" aria-controls="main-navigation" hidden>Menü <span aria-hidden="true">☰</span></button>
+      <nav class="site-nav" id="main-navigation" aria-label="Hauptnavigation">
+        <ul>
+          <li><a href="#start" aria-current="location">Start</a></li>
+          <li><a href="#chronik">Geschichte</a></li>
+          <li><a href="#generationen">Familie</a></li>
+          <li><a href="#stimmen">Erlebnisse</a></li>
+          <li><a href="#luna-archiv">Archiv</a></li>
+          <li><a href="#blick-nach-vorn">Zukunft</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <!-- Schritt 1: Startbereich. Der Hintergrund benötigt keine Bilddatei. -->
+    <section class="hero" id="start" aria-labelledby="cinema-name">
+      <div class="hero__frame" aria-hidden="true"></div>
+      <div class="hero__content">
+        <span class="moon" aria-hidden="true"></span>
+        <h1 class="wordmark" id="cinema-name">
+          <span class="wordmark__name">LUNA</span>
+          <span class="wordmark__subtitle">LICHTSPIELE</span>
+        </h1>
+        <p class="hero__location">FALKENRIED <span aria-hidden="true">·</span> SEIT 1928</p>
+        <span class="hero__rule" aria-hidden="true"></span>
+        <p class="hero__tagline">Fast ein Jahrhundert Kino. Vier Generationen.<br><span class="hero__tagline-accent">Eine Leidenschaft.</span></p>
+        <!-- Ein echter Anker funktioniert auch bei deaktiviertem JavaScript. -->
+        <a class="discover-button" href="#geschichte">
+          <span>Unsere Geschichte entdecken</span>
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" aria-hidden="true">
+            <path d="M12 4v15m-6-6 6 6 6-6" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- Einführung: Die DOM-Reihenfolge entspricht der mobilen Lesereihenfolge. -->
+    <section class="story-intro" id="geschichte" tabindex="-1" aria-labelledby="story-title">
+      <div class="story-intro__layout">
+        <header class="story-intro__heading" data-reveal>
+          <p class="story-intro__eyebrow">SEIT 1928</p>
+          <h2 id="story-title">Ein Kino. Vier Generationen. Fast ein Jahrhundert Filmgeschichte.</h2>
+        </header>
+        <figure class="story-intro__figure" data-reveal>
+          <img src="assets/images/1928.webp"
+               alt="Historische Visualisierung der Luna Lichtspiele in Falkenried Ende der 1920er-Jahre"
+               width="1536" height="1024" loading="lazy" decoding="async">
+          <figcaption>Visualisierung der Luna Lichtspiele um 1928</figcaption>
+        </figure>
+        <div class="story-intro__text" data-reveal>
+          <p>Als Wilhelm Hartmann 1928 in Falkenried die Luna Lichtspiele eröffnete, wurden Filme noch von einem Pianisten begleitet. Was als kleines Filmtheater begann, entwickelte sich über vier Generationen zu einem festen Bestandteil des kulturellen Lebens der Stadt.</p>
+          <p>Von den ersten Tonfilmen über die große Kinozeit der 1950er-Jahre bis zur digitalen Projektion hat sich das Luna immer wieder verändert – ohne seinen ursprünglichen Charakter zu verlieren. Heute führt Jonas Hartmann das Kino in vierter Generation und verbindet dabei die Geschichte des Hauses mit den Anforderungen eines modernen Filmtheaters.</p>
+        </div>
+      </div>
+    </section>
+    <!-- Chronik bis zur Gegenwart 2026. Ohne JavaScript bleiben alle Stationen lesbar. -->
+    <section class="timeline" id="chronik" aria-labelledby="timeline-title">
+      <div class="timeline__inner">
+        <header class="timeline__header">
+          <p class="timeline__eyebrow">UNSERE GESCHICHTE</p>
+          <h2 id="timeline-title">Fast ein Jahrhundert auf der Leinwand.</h2>
+          <p class="timeline__subtitle">Von der Stummfilmzeit bis zum digitalen Kino.</p>
+        </header>
+
+        <!-- Die Jahresleiste wird nur für die interaktive Desktopansicht eingeblendet. -->
+        <div class="timeline__tabs" role="tablist" aria-label="Jahr der Kinogeschichte auswählen" hidden></div>
+
+        <div class="timeline__stations">
+          <article class="timeline__panel" id="station-1928" aria-labelledby="title-1928" data-year="1928">
+            <figure class="timeline__figure">
+              <img src="assets/images/1928.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Historische Visualisierung: Gäste vor dem Eingang der Luna Lichtspiele um 1928">
+              <figcaption>Visualisierung der Luna Lichtspiele, 1928</figcaption>
+            </figure>
+            <div class="timeline__copy">
+              <p class="timeline__year">1928</p>
+              <h3 id="title-1928">Der erste Vorhang hebt sich</h3>
+              <p class="timeline__text">Wilhelm Hartmann eröffnet die Luna Lichtspiele in Falkenried. In einem umgebauten Veranstaltungssaal erleben die ersten Gäste noch Stummfilme, die während der Vorstellung von einem Pianisten live begleitet werden.</p>
+            </div>
+          </article>
+
+          <article class="timeline__panel timeline__panel--text" id="station-1931" aria-labelledby="title-1931" data-year="1931">
+            <div class="timeline__copy">
+              <p class="timeline__year">1931</p>
+              <h3 id="title-1931">Der Ton hält Einzug</h3>
+              <p class="timeline__text">Nur drei Jahre nach der Eröffnung investiert Wilhelm Hartmann in eine neue Tonanlage. Erstmals sind in den Luna Lichtspielen Stimmen, Musik und Geräusche direkt aus dem Film zu hören. Für das junge Filmtheater beginnt damit eine neue Ära.</p>
+            </div>
+          </article>
+
+          <article class="timeline__panel timeline__panel--text" id="station-1945" aria-labelledby="title-1945" data-year="1945/46">
+            <div class="timeline__copy">
+              <p class="timeline__year">1945/46</p>
+              <h3 id="title-1945">Ein neuer Anfang</h3>
+              <p class="timeline__text">Nach einer vorübergehenden Schließung nimmt das Luna seinen Spielbetrieb wieder auf. Mit einfachen Mitteln wird der Kinosaal instand gesetzt. Für viele Menschen in Falkenried wird das Kino in den folgenden Jahren wieder zu einem Ort der Unterhaltung und Begegnung.</p>
+            </div>
+          </article>
+
+          <article class="timeline__panel" id="station-1958" aria-labelledby="title-1958" data-year="1958">
+            <figure class="timeline__figure">
+              <img src="assets/images/1958.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Historische Visualisierung: gut besuchter Kinosaal der Luna Lichtspiele mit großer Leinwand, 1958">
+              <figcaption>Visualisierung der Luna Lichtspiele, 1958</figcaption>
+            </figure>
+            <div class="timeline__copy">
+              <p class="timeline__year">1958</p>
+              <h3 id="title-1958">Die große Kinozeit</h3>
+              <p class="timeline__text">Das Luna erlebt eine seiner erfolgreichsten Zeiten. Der Kinosaal wird modernisiert und erhält eine größere Leinwand sowie neue Sitzplätze. Vor allem am Wochenende füllt sich das Filmtheater regelmäßig – ein Kinobesuch gehört für viele Falkenrieder zum festen Freizeitprogramm.</p>
+            </div>
+          </article>
+
+          <article class="timeline__panel timeline__panel--text" id="station-1976" aria-labelledby="title-1976" data-year="1976">
+            <div class="timeline__copy">
+              <p class="timeline__year">1976</p>
+              <h3 id="title-1976">Kino im Wandel</h3>
+              <p class="timeline__text">Das Fernsehen hat längst Einzug in die Wohnzimmer gehalten und die Besucherzahlen gehen zurück. Friedrich Hartmann reagiert mit besonderen Filmreihen, Wiederaufführungen und Sondervorstellungen. Das Luna beginnt sich vom klassischen Filmtheater zu einem kulturellen Treffpunkt weiterzuentwickeln.</p>
+            </div>
+          </article>
+
+          <article class="timeline__panel" id="station-1994" aria-labelledby="title-1994" data-year="1994">
+            <figure class="timeline__figure">
+              <img src="assets/images/1994.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Historische Visualisierung: Umbauarbeiten am zweiten Kinosaal der Luna Lichtspiele, 1994">
+              <figcaption>Visualisierung der Luna Lichtspiele, 1994</figcaption>
+            </figure>
+            <div class="timeline__copy">
+              <p class="timeline__year">1994</p>
+              <h3 id="title-1994">Platz für mehr Film</h3>
+              <p class="timeline__text">Unter Claudia Hartmann entsteht in einem bislang anders genutzten Gebäudeteil ein zweiter, kleinerer Kinosaal. Dadurch kann das Luna neben größeren Produktionen nun häufiger kleinere Filme und besondere Programme zeigen.</p>
+            </div>
+          </article>
+
+          <article class="timeline__panel" id="station-2012" aria-labelledby="title-2012" data-year="2012">
+            <figure class="timeline__figure">
+              <img src="assets/images/2012.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Visualisierung des Vorführraums der Luna Lichtspiele mit analogem Filmprojektor und digitaler Projektion, 2012">
+              <figcaption>Visualisierung der Luna Lichtspiele, 2012</figcaption>
+            </figure>
+            <div class="timeline__copy">
+              <p class="timeline__year">2012</p>
+              <h3 id="title-2012">Abschied von der Filmrolle</h3>
+              <p class="timeline__text">Nach mehr als acht Jahrzehnten verändert sich die Projektion grundlegend: Die Luna Lichtspiele stellen auf digitale Kinotechnik um. Einer der alten Filmprojektoren bleibt erhalten und bekommt einen Ehrenplatz im Eingangsbereich.</p>
+            </div>
+          </article>
+
+          <article class="timeline__panel timeline__panel--text" id="station-2020" aria-labelledby="title-2020" data-year="2020">
+            <div class="timeline__copy">
+              <p class="timeline__year">2020</p>
+              <h3 id="title-2020">Wenn der Vorhang geschlossen bleibt</h3>
+              <p class="timeline__text">Die Corona-Pandemie zwingt auch die Luna Lichtspiele zeitweise zur Schließung. Jonas Hartmann und sein Team nutzen einen Teil dieser Zeit für Renovierungsarbeiten. Nach der Wiedereröffnung gewinnen Sonderveranstaltungen und gemeinsame Kinoerlebnisse noch stärker an Bedeutung.</p>
+            </div>
+          </article>
+
+          <article class="timeline__panel timeline__panel--text" id="station-2026" aria-labelledby="title-2026" data-year="2026">
+            <div class="timeline__copy">
+              <p class="timeline__year">2026</p>
+              <h3 id="title-2026">Tradition trifft Gegenwart</h3>
+              <p class="timeline__text">Heute führt Jonas Hartmann die Luna Lichtspiele in vierter Generation. Zwei Kinosäle, digitale Projektion und ein abwechslungsreiches Programm verbinden modernes Kino mit der fast hundertjährigen Geschichte des Hauses. Neben aktuellen Filmen gehören Klassiker-Abende, ausgewählte Filmreihen und Sonderveranstaltungen inzwischen fest zum Programm.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- Vier Generationen: gemeinsame Porträtfläche, mobil einzelne aufklappbare Bereiche. -->
+    <section class="family" id="generationen" aria-labelledby="family-title">
+      <div class="family__inner">
+        <header class="family__header">
+          <p class="family__eyebrow">VIER GENERATIONEN</p>
+          <h2 id="family-title">Eine Familie. Eine Leidenschaft für das Kino.</h2>
+          <p class="family__intro">Seit der Eröffnung 1928 befindet sich das Luna in den Händen der Familie Hartmann. Jede Generation hat das Filmtheater auf ihre eigene Weise geprägt und durch eine neue Epoche des Kinos geführt.</p>
+        </header>
+
+        <div class="family__gallery">
+          <article class="family__person" aria-labelledby="family-name-wilhelm">
+            <div class="family__portrait">
+              <img src="assets/images/wilhelm-1928.webp" width="1024" height="1536" loading="lazy" decoding="async" alt="Fiktives Porträt von Wilhelm Hartmann vor den Luna Lichtspielen, um 1928">
+              <h3><button class="family__select" type="button" id="family-button-wilhelm" aria-controls="family-detail-wilhelm" disabled>
+                <span class="family__name" id="family-name-wilhelm">Wilhelm Hartmann</span>
+                <span class="family__period">1. Generation · 1928–1962</span>
+                <span class="family__indicator" aria-hidden="true">+</span>
+              </button></h3>
+            </div>
+            <div class="family__detail" id="family-detail-wilhelm" role="region" aria-labelledby="family-name-wilhelm">
+              <p class="family__role">DER GRÜNDER</p>
+              <p class="family__text">Wilhelm Hartmann wagt 1928 den Schritt vom Veranstaltungssaal zum eigenen Filmtheater. Für ihn ist Kino mehr als technische Faszination: Es soll ein Ort sein, an dem Menschen gemeinsam Geschichten erleben. Unter seiner Leitung übersteht das Luna seine ersten Jahrzehnte und wird zu einer festen Adresse in Falkenried.</p>
+            </div>
+          </article>
+
+          <article class="family__person" aria-labelledby="family-name-friedrich">
+            <div class="family__portrait">
+              <img src="assets/images/friedrich-1962.webp" width="1024" height="1536" loading="lazy" decoding="async" alt="Fiktives Porträt von Friedrich Hartmann vor den Luna Lichtspielen, um 1962">
+              <h3><button class="family__select" type="button" id="family-button-friedrich" aria-controls="family-detail-friedrich" disabled>
+                <span class="family__name" id="family-name-friedrich">Friedrich Hartmann</span>
+                <span class="family__period">2. Generation · 1962–1991</span>
+                <span class="family__indicator" aria-hidden="true">+</span>
+              </button></h3>
+            </div>
+            <div class="family__detail" id="family-detail-friedrich" role="region" aria-labelledby="family-name-friedrich">
+              <p class="family__role">DER BEWAHRER</p>
+              <p class="family__text">Friedrich übernimmt das Luna von seinem Vater in einer Zeit des Wandels. Während das Fernsehen immer mehr Zuschauer in die eigenen Wohnzimmer zieht, setzt er auf besondere Filmabende und persönliche Nähe zum Publikum. Damit bewahrt er den Charakter des Familienkinos und entwickelt das Luna zugleich zu einem kulturellen Treffpunkt weiter.</p>
+            </div>
+          </article>
+
+          <article class="family__person" aria-labelledby="family-name-claudia">
+            <div class="family__portrait">
+              <img src="assets/images/claudia-1994.webp" width="1024" height="1536" loading="lazy" decoding="async" alt="Fiktives Porträt von Claudia Hartmann vor den Luna Lichtspielen, um 1994">
+              <h3><button class="family__select" type="button" id="family-button-claudia" aria-controls="family-detail-claudia" disabled>
+                <span class="family__name" id="family-name-claudia">Claudia Hartmann</span>
+                <span class="family__period">3. Generation · 1991–2018</span>
+                <span class="family__indicator" aria-hidden="true">+</span>
+              </button></h3>
+            </div>
+            <div class="family__detail" id="family-detail-claudia" role="region" aria-labelledby="family-name-claudia">
+              <p class="family__role">DIE ERNEUERIN</p>
+              <p class="family__text">Claudia führt das Familienkino in eine neue Ära. Unter ihrer Leitung entsteht 1994 der zweite Kinosaal, später begleitet sie die Umstellung von analoger auf digitale Projektion. Dabei verbindet sie technische Modernisierung mit dem Anspruch, die persönliche Atmosphäre des Luna zu erhalten.</p>
+            </div>
+          </article>
+
+          <article class="family__person" aria-labelledby="family-name-jonas">
+            <div class="family__portrait">
+              <img src="assets/images/jonas-2026.webp" width="1024" height="1536" loading="lazy" decoding="async" alt="Fiktives Porträt von Jonas Hartmann vor den Luna Lichtspielen, 2026">
+              <h3><button class="family__select" type="button" id="family-button-jonas" aria-controls="family-detail-jonas" disabled>
+                <span class="family__name" id="family-name-jonas">Jonas Hartmann</span>
+                <span class="family__period">4. Generation · Seit 2018</span>
+                <span class="family__indicator" aria-hidden="true">+</span>
+              </button></h3>
+            </div>
+            <div class="family__detail" id="family-detail-jonas" role="region" aria-labelledby="family-name-jonas">
+              <p class="family__role">DER HEUTIGE BETREIBER</p>
+              <p class="family__text">Jonas übernimmt das Luna 2018 in vierter Generation. Neben aktuellen Kinofilmen setzt er auf Klassiker-Abende, Filmreihen und Sonderveranstaltungen. Für ihn bedeutet die Geschichte des Hauses nicht, stehen zu bleiben – sondern das Luna so weiterzuentwickeln, dass es auch künftig ein besonderer Ort für gemeinsames Filmerleben bleibt.</p>
+            </div>
+          </article>
+        </div>
+        <p class="family__caption">KI-generierte Porträts der fiktiven Familie Hartmann.</p>
+      </div>
+    </section>
+    <!-- Atmosphärischer Vergleich: identische Bildflächen, ohne geometrische Verzerrung. -->
+    <section class="comparison" id="damals-heute" aria-labelledby="comparison-title">
+      <div class="comparison__inner">
+        <header class="comparison__header">
+          <p class="comparison__eyebrow">DAMALS &amp; HEUTE</p>
+          <h2 id="comparison-title">Ein Haus im Wandel der Zeit.</h2>
+          <p class="comparison__intro">Fast ein Jahrhundert liegt zwischen diesen beiden Ansichten. Fassade, Technik und Programm haben sich verändert – die Luna Lichtspiele sind ihrem Standort in Falkenried jedoch bis heute treu geblieben.</p>
+        </header>
+        <figure class="comparison__figure">
+          <div class="comparison__viewer">
+            <img class="comparison__image" src="assets/images/luna-vergleich-2026.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="KI-generierte Außenansicht der fiktiven Luna Lichtspiele im Jahr 2026 mit modernem gläsernem Eingangsbereich">
+            <img class="comparison__image comparison__image--past" src="assets/images/1928.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="KI-generierte historische Außenansicht der fiktiven Luna Lichtspiele um 1928 mit Gästen vor dem Kino">
+            <span class="comparison__year comparison__year--past">1928</span>
+            <span class="comparison__year comparison__year--present">2026</span>
+            <div class="comparison__divider" aria-hidden="true">
+              <span class="comparison__handle">
+                <svg width="24" height="20" viewBox="0 0 24 20" fill="none"><path d="m8 5-5 5 5 5m8-10 5 5-5 5" stroke="currentColor" stroke-width="1.5"/></svg>
+              </span>
+            </div>
+            <input class="comparison__range" type="range" min="0" max="100" value="50" step="1" aria-label="Bildvergleich: sichtbarer Anteil der Ansicht von 1928" aria-valuetext="1928: 50 Prozent sichtbar; 2026: 50 Prozent sichtbar" aria-describedby="comparison-help" disabled>
+          </div>
+          <p class="comparison__help" id="comparison-help">Regler ziehen oder mit den Pfeiltasten zwischen damals und heute vergleichen.</p>
+          <figcaption>KI-generierte Visualisierungen der fiktiven Luna Lichtspiele, 1928 und 2026.</figcaption>
+        </figure>
+      </div>
+    </section>
+    <!-- Lokale Audio-Erinnerungen: keine automatische Wiedergabe. -->
+    <section class="voices" id="stimmen" aria-labelledby="voices-title">
+      <div class="voices__inner">
+        <header class="voices__header">
+          <p class="voices__eyebrow">STIMMEN AUS DEM LUNA</p>
+          <h2 id="voices-title">Geschichten, die man nicht nur lesen kann.</h2>
+          <p class="voices__intro">Drei Stimmen aus drei Zeiten erzählen von besonderen Momenten und davon, was das Luna für sie bedeutet.</p>
+        </header>
+        <div class="voices__stations">
+          <article class="voice" aria-labelledby="voice-title-1958">
+            <p class="voice__year">1958</p>
+            <h3 id="voice-title-1958">Mein erster Abend im Luna</h3>
+            <p class="voice__speaker">Eine Kinobesucherin erinnert sich</p>
+            <audio preload="metadata" src="assets/audio/kinobesucherin-1958.mp3" aria-label="Mein erster Abend im Luna"></audio>
+            <div class="voice__controls">
+              <button class="voice__play" type="button" aria-label="Mein erster Abend im Luna abspielen" disabled>
+                <svg class="voice__play-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="m9 5 11 7-11 7Z" fill="currentColor"/></svg>
+                <svg class="voice__pause-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M8 5v14m8-14v14" stroke="currentColor" stroke-width="3"/></svg>
+              </button>
+              <div class="voice__progress">
+                <input class="voice__seek" type="range" min="0" max="100" step="0.1" value="0" aria-label="Wiedergabeposition: Mein erster Abend im Luna" disabled>
+                <div class="voice__times" aria-hidden="true"><span class="voice__elapsed">0:00</span><span class="voice__duration">–:––</span></div>
+              </div>
+            </div>
+            <p class="voice__status" role="status"></p>
+            <details class="voice__transcript">
+              <summary><span class="voice__transcript-show">Transkript anzeigen</span><span class="voice__transcript-hide">Transkript ausblenden</span></summary>
+              <div class="voice__transcript-text">
+                <p><strong>Mein erster Abend im Luna</strong><br>Eine fiktive Kinobesucherin</p>
+                <p>An meinen ersten Abend im Luna erinnere ich mich noch genau. Vor dem Eingang standen die Leute bis auf den Gehweg und drinnen war fast jeder Platz besetzt. Als dann das Licht langsam ausging und der Vorhang sich öffnete, wurde es plötzlich ganz still. Für uns war Kino damals etwas Besonderes. Man ging nicht einfach nur einen Film sehen – es war ein richtiger Abend.</p>
+              </div>
+            </details>
+          </article>
+          <article class="voice" aria-labelledby="voice-title-1994">
+            <p class="voice__year">1994</p>
+            <h3 id="voice-title-1994">Platz für neue Geschichten</h3>
+            <p class="voice__speaker">Claudia Hartmann · 3. Generation</p>
+            <audio preload="metadata" src="assets/audio/claudia-1994.mp3" aria-label="Platz für neue Geschichten"></audio>
+            <div class="voice__controls">
+              <button class="voice__play" type="button" aria-label="Platz für neue Geschichten abspielen" disabled>
+                <svg class="voice__play-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="m9 5 11 7-11 7Z" fill="currentColor"/></svg>
+                <svg class="voice__pause-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M8 5v14m8-14v14" stroke="currentColor" stroke-width="3"/></svg>
+              </button>
+              <div class="voice__progress">
+                <input class="voice__seek" type="range" min="0" max="100" step="0.1" value="0" aria-label="Wiedergabeposition: Platz für neue Geschichten" disabled>
+                <div class="voice__times" aria-hidden="true"><span class="voice__elapsed">0:00</span><span class="voice__duration">–:––</span></div>
+              </div>
+            </div>
+            <p class="voice__status" role="status"></p>
+            <details class="voice__transcript">
+              <summary><span class="voice__transcript-show">Transkript anzeigen</span><span class="voice__transcript-hide">Transkript ausblenden</span></summary>
+              <div class="voice__transcript-text">
+                <p><strong>Platz für neue Geschichten</strong><br>Claudia Hartmann · 3. Generation</p>
+                <p>Als wir 1994 den zweiten Saal eröffnet haben, war das für uns ein ziemlich großer Schritt. Plötzlich konnten wir neben den großen Filmen auch kleinere Produktionen und besondere Filmreihen zeigen. Natürlich war der Umbau eine Herausforderung – aber genau diese Mischung aus großem Kino und kleinen Entdeckungen gehört für mich zum Luna.</p>
+              </div>
+            </details>
+          </article>
+          <article class="voice" aria-labelledby="voice-title-2026">
+            <p class="voice__year">2026</p>
+            <h3 id="voice-title-2026">Warum Kino bleibt</h3>
+            <p class="voice__speaker">Jonas Hartmann · 4. Generation</p>
+            <audio preload="metadata" src="assets/audio/jonas-2026.mp3" aria-label="Warum Kino bleibt"></audio>
+            <div class="voice__controls">
+              <button class="voice__play" type="button" aria-label="Warum Kino bleibt abspielen" disabled>
+                <svg class="voice__play-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="m9 5 11 7-11 7Z" fill="currentColor"/></svg>
+                <svg class="voice__pause-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M8 5v14m8-14v14" stroke="currentColor" stroke-width="3"/></svg>
+              </button>
+              <div class="voice__progress">
+                <input class="voice__seek" type="range" min="0" max="100" step="0.1" value="0" aria-label="Wiedergabeposition: Warum Kino bleibt" disabled>
+                <div class="voice__times" aria-hidden="true"><span class="voice__elapsed">0:00</span><span class="voice__duration">–:––</span></div>
+              </div>
+            </div>
+            <p class="voice__status" role="status"></p>
+            <details class="voice__transcript">
+              <summary><span class="voice__transcript-show">Transkript anzeigen</span><span class="voice__transcript-hide">Transkript ausblenden</span></summary>
+              <div class="voice__transcript-text">
+                <p><strong>Warum Kino bleibt</strong><br>Jonas Hartmann · 4. Generation</p>
+                <p>Natürlich kann man heute fast jeden Film irgendwann zu Hause sehen. Aber für mich ersetzt das nicht diesen Moment, wenn im Saal das Licht ausgeht und hundert Menschen gleichzeitig auf dieselbe Leinwand schauen. Genau darum geht es im Luna. Wir wollen die Geschichte dieses Hauses bewahren – aber gleichzeitig immer wieder neue Gründe schaffen, gemeinsam ins Kino zu kommen.</p>
+              </div>
+            </details>
+          </article>
+        </div>
+        <noscript><p class="voices__notice">Zum Abspielen der Audio-Erinnerungen bitte JavaScript im Browser aktivieren.</p></noscript>
+        <p class="voices__caption">Fiktive, KI-generierte Audio-Erinnerungen zur Geschichte der Luna Lichtspiele.</p>
+      </div>
+    </section>
+    <!-- Lokales Quiz: Zustand bleibt ausschließlich im aktuellen Seitenbesuch. -->
+    <section class="quiz" id="luna-quiz" aria-labelledby="quiz-title">
+      <div class="quiz__inner">
+        <header class="quiz__header">
+          <p class="quiz__eyebrow">DAS LUNA-QUIZ</p>
+          <h2 id="quiz-title">Wie gut kennst du unser Kino?</h2>
+          <p class="quiz__intro">Fast ein Jahrhundert Kinogeschichte liegt hinter dem Luna. Fünf Fragen zeigen, wie aufmerksam du durch unsere Geschichte gereist bist.</p>
+        </header>
+        <div class="quiz__stage" hidden>
+          <div class="quiz__question-view">
+            <div class="quiz__progress">
+              <p class="quiz__counter">FRAGE 1 / 5</p>
+              <div class="quiz__frames" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+            </div>
+            <h3 class="quiz__question" id="quiz-question" tabindex="-1"></h3>
+            <div class="quiz__answers" role="group" aria-labelledby="quiz-question"></div>
+            <p class="quiz__feedback" role="status" aria-live="polite" aria-atomic="true"></p>
+            <button class="quiz__next quiz__button" type="button" hidden>Nächste Frage</button>
+          </div>
+          <div class="quiz__result" hidden>
+            <p class="quiz__eyebrow">DEIN ERGEBNIS</p>
+            <h3 class="quiz__score" tabindex="-1"></h3>
+            <p class="quiz__result-text"></p>
+            <button class="quiz__restart quiz__button" type="button">Noch einmal spielen</button>
+          </div>
+        </div>
+        <noscript><p>Bitte aktiviere JavaScript im Browser, um das Luna-Quiz zu spielen.</p></noscript>
+      </div>
+    </section>
+    <!-- Archiv: lokale Originale; Links funktionieren auch ohne JavaScript. -->
+    <section class="archive" id="luna-archiv" aria-labelledby="archive-title">
+      <div class="archive__inner">
+        <header class="archive__header">
+          <p class="archive__eyebrow">AUS DEM LUNA-ARCHIV</p>
+          <h2 id="archive-title">Fundstücke aus fast hundert Jahren.</h2>
+          <p class="archive__intro">Alte Fotografien, vergessene Erinnerungsstücke und besondere Einblicke: Unser kleines Archiv erzählt die Geschichte der Luna Lichtspiele aus einer anderen Perspektive.</p>
+        </header>
+        <ol class="archive__grid">
+          <li class="archive__item">
+            <a class="archive__link" href="assets/images/archiv-1928.webp" aria-label="1928: Der erste Kinosaal – Großansicht öffnen">
+              <img src="assets/images/archiv-1928.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Fiktive historische Visualisierung des ersten Luna-Kinosaals mit Holzklappsitzen und geschlossenem Bühnenvorhang, 1928">
+              <span class="archive__label"><span class="archive__year">1928</span><span class="archive__name">Der erste Kinosaal</span><span class="archive__expand" aria-hidden="true">↗</span></span>
+            </a>
+            <p class="archive__description" hidden>Holzklappsitze, schwerer Vorhang und die Vorfreude auf bewegte Bilder: So begann die Geschichte der Luna Lichtspiele.</p>
+          </li>
+          <li class="archive__item">
+            <a class="archive__link" href="assets/images/archiv-1931.webp" aria-label="1931: Eine Karte für einen Kinoabend – Großansicht öffnen">
+              <img src="assets/images/archiv-1931.webp" width="1774" height="887" loading="lazy" decoding="async" alt="Fiktive Eintrittskarte der Luna Lichtspiele von 1931 mit Sitzplatzangabe und abtrennbarem Kontrollabschnitt">
+              <span class="archive__label"><span class="archive__year">1931</span><span class="archive__name">Eine Karte für einen Kinoabend</span><span class="archive__expand" aria-hidden="true">↗</span></span>
+            </a>
+            <p class="archive__description" hidden>Ein kleines Stück Papier, das den Eintritt in eine andere Welt versprach. Mit dem Einzug des Tonfilms begann auch im Luna eine neue Ära.</p>
+          </li>
+          <li class="archive__item">
+            <a class="archive__link" href="assets/images/archiv-1958.webp" aria-label="1958: Hinter den Kulissen – Großansicht öffnen">
+              <img src="assets/images/archiv-1958.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Fiktive historische Visualisierung des Luna-Vorführraums mit analogem Filmprojektor und Filmdosen, 1958">
+              <span class="archive__label"><span class="archive__year">1958</span><span class="archive__name">Hinter den Kulissen</span><span class="archive__expand" aria-hidden="true">↗</span></span>
+            </a>
+            <p class="archive__description" hidden>Ratternde Filmrollen, schwere Projektoren und ein Lichtstrahl durch die Dunkelheit. Im Vorführraum sorgte die Technik dafür, dass auf der Leinwand Geschichten lebendig wurden.</p>
+          </li>
+          <li class="archive__item">
+            <a class="archive__link" href="assets/images/archiv-1976.webp" aria-label="1976: Treffpunkt vor dem Film – Großansicht öffnen">
+              <img src="assets/images/archiv-1976.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Fiktive Visualisierung des Luna-Foyers mit Kinokasse, rotem Sofa und fiktiven Filmplakaten, 1976">
+              <span class="archive__label"><span class="archive__year">1976</span><span class="archive__name">Treffpunkt vor dem Film</span><span class="archive__expand" aria-hidden="true">↗</span></span>
+            </a>
+            <p class="archive__description" hidden>Warme Lichter, Filmplakate und ein kurzer Plausch an der Kinokasse. Das Foyer war schon damals mehr als ein Warteraum – hier begann für viele Besucher der Kinoabend.</p>
+          </li>
+          <li class="archive__item">
+            <a class="archive__link" href="assets/images/archiv-1994.webp" aria-label="1994: Ein zweiter Saal für neue Geschichten – Großansicht öffnen">
+              <img src="assets/images/archiv-1994.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Fiktive Visualisierung des kleineren zweiten Luna-Kinosaals mit roten Sitzen und Leinwand, 1994">
+              <span class="archive__label"><span class="archive__year">1994</span><span class="archive__name">Ein zweiter Saal für neue Geschichten</span><span class="archive__expand" aria-hidden="true">↗</span></span>
+            </a>
+            <p class="archive__description" hidden>Unter Claudia Hartmann wurde das Luna um einen zweiten Kinosaal erweitert. So entstand mehr Raum für besondere Filmreihen, kleinere Produktionen und neue Kinoerlebnisse.</p>
+          </li>
+          <li class="archive__item">
+            <a class="archive__link" href="assets/images/archiv-2026.webp" aria-label="2026: Tradition trifft Gegenwart – Großansicht öffnen">
+              <img src="assets/images/archiv-2026.webp" width="1672" height="941" loading="lazy" decoding="async" alt="Fiktive Visualisierung des großen Luna-Kinosaals mit ansteigenden Sitzreihen, mehreren Gängen und geschwungener Decke, 2026">
+              <span class="archive__label"><span class="archive__year">2026</span><span class="archive__name">Tradition trifft Gegenwart</span><span class="archive__expand" aria-hidden="true">↗</span></span>
+            </a>
+            <p class="archive__description" hidden>Moderne Kinotechnik, gemütliche Sitze und die besondere Atmosphäre eines Familienkinos. Auch in vierter Generation bleibt das Luna ein Ort für gemeinsame Filmerlebnisse.</p>
+          </li>
+        </ol>
+        <p class="archive__notice">KI-generierte Visualisierungen und fiktive Archivstücke zur Geschichte der Luna Lichtspiele.</p>
+      </div>
+      <dialog class="archive-dialog" aria-labelledby="archive-dialog-title" aria-describedby="archive-dialog-description">
+        <div class="archive-dialog__toolbar">
+          <p class="archive-dialog__counter" aria-live="polite" aria-atomic="true"></p>
+          <button class="archive-dialog__close" type="button" aria-label="Großansicht schließen" autofocus>Schließen <span aria-hidden="true">×</span></button>
+        </div>
+        <img class="archive-dialog__image" alt="">
+        <div class="archive-dialog__info">
+          <p class="archive-dialog__year"></p>
+          <h3 id="archive-dialog-title"></h3>
+          <p id="archive-dialog-description"></p>
+        </div>
+        <div class="archive-dialog__navigation">
+          <button class="archive-dialog__previous" type="button" aria-label="Vorheriges Archivbild"><span aria-hidden="true">←</span> Zurück</button>
+          <button class="archive-dialog__next" type="button" aria-label="Nächstes Archivbild">Weiter <span aria-hidden="true">→</span></button>
+        </div>
+      </dialog>
+    </section>
+    <!-- Erzählerischer Abschluss aus der Gegenwart 2026: 2028 liegt noch voraus. -->
+    <section class="outlook" id="blick-nach-vorn" aria-labelledby="outlook-title">
+      <div class="outlook__inner">
+        <header class="outlook__header">
+          <p class="outlook__eyebrow">BLICK NACH VORN</p>
+          <h2 id="outlook-title">Die nächste Vorstellung beginnt.</h2>
+          <p class="outlook__intro">Seit fast einem Jahrhundert gehen im Luna die Lichter aus, damit Geschichten lebendig werden. Und unsere eigene Geschichte ist noch lange nicht zu Ende.</p>
+        </header>
+        <div class="outlook__text">
+          <p>Auch in vierter Generation bleibt das Luna ein Ort für Menschen, die Filme gemeinsam erleben möchten. Jonas Hartmann möchte bewahren, was das Kino seit 1928 besonders macht – und zugleich Raum für neue Ideen schaffen: besondere Filmreihen, gemeinsame Kinoabende und Begegnungen, die über den Abspann hinaus in Erinnerung bleiben.</p>
+          <p>2028 feiern die Luna Lichtspiele ihr hundertjähriges Bestehen. Ein besonderer Meilenstein für ein Familienkino, das sich immer wieder verändert hat, ohne seine Wurzeln zu vergessen.</p>
+        </div>
+        <div class="outlook__anniversary">
+          <svg class="outlook__moon" viewBox="0 0 80 80" width="80" height="80" aria-hidden="true" focusable="false">
+            <path d="M51 7A34 34 0 1 0 65 64A35 35 0 0 1 51 7Z" fill="currentColor"/>
+          </svg>
+          <div class="outlook__years">
+            <span>1928</span><span class="outlook__line" aria-hidden="true"></span><span>2028</span>
+          </div>
+          <p class="outlook__anniversary-label">100 JAHRE LUNA LICHTSPIELE</p>
+        </div>
+        <blockquote class="outlook__quote">
+          <p>„Denn solange Menschen gemeinsam Geschichten erleben wollen, wird im Luna ein Licht brennen.“</p>
+        </blockquote>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__columns">
+        <div class="site-footer__identity">
+          <a class="site-brand" href="#start" aria-label="Luna Lichtspiele – zum Anfang">
+            <svg viewBox="0 0 80 80" width="28" height="28" aria-hidden="true"><path d="M51 7A34 34 0 1 0 65 64A35 35 0 0 1 51 7Z" fill="currentColor"/></svg>
+            <span>LUNA LICHTSPIELE</span>
+          </a>
+          <p class="site-footer__location">Falkenried · Seit 1928</p>
+          <p>Ein Familienkino. Vier Generationen.<br>Unzählige Geschichten.</p>
+        </div>
+        <nav class="site-footer__nav" aria-label="Footernavigation">
+          <ul>
+            <li><a href="#start">Start</a></li>
+            <li><a href="#chronik">Geschichte</a></li>
+            <li><a href="#generationen">Familie</a></li>
+            <li><a href="#stimmen">Erlebnisse</a></li>
+            <li><a href="#luna-archiv">Archiv</a></li>
+            <li><a href="#blick-nach-vorn">Zukunft</a></li>
+          </ul>
+        </nav>
+        <p class="site-footer__notice">Die Luna Lichtspiele und der Ort Falkenried sind fiktiv. Diese Website entstand als nicht kommerzielles Gestaltungsprojekt. Texte, historische Darstellungen und Personen sind Teil einer erfundenen Unternehmensgeschichte.</p>
+      </div>
+      <div class="site-footer__bottom">
+        <p>© 2026 Luna Lichtspiele · Fiktives Projekt</p>
+        <p>Mit Liebe zum Kino gestaltet.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
